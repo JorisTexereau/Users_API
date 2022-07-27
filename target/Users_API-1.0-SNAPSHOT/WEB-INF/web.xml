@@ -11,6 +11,10 @@
             <param-name>jersey.config.server.provider.scanning.recursive</param-name>
             <param-value>true</param-value>
         </init-param>
+        <init-param>
+            <param-name>javax.ws.rs.container.ContainerRequestFilter</param-name>
+            <param-value>org.glassfish.jersey.filter.LoggingFilter;com.mycompany.users_api.AuthFilter</param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
     
